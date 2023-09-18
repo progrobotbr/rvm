@@ -1,0 +1,12 @@
+class teste14 beg
+
+  def main() beg
+
+    object(print) p
+    p = new print
+    
+    p.printcln("Esta ok")
+      
+  enddef
+  
+endclass

@@ -1,0 +1,33 @@
+
+
+table(header) tb
+
+tb.append(header)    retorna 0 falso 1 sucesso         
+tb.insert(header,1)  retorna 0 falso 1 sucesso
+tb.read(5)           retorna 0 falso 1 sucesso
+tb.modify(header,1)  retorna 0 falso 1 sucesso
+tb.size()            retorna int
+
+tb.get()      retorna header
+
+tb.rc         retorna 0 falso 1 sucesso - sempre a ultima operação
+
+pega o tipo da tabela e passar para 
+
+
+int l
+
+tb.append(h)
+tb.insert(h,1)
+tb.modify(h,5)
+
+while(l<=tb.size()) beg
+  
+  h = tb.get(l)
+
+  l = l + 1
+ 
+endwhile
+
+__t__
+

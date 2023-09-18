@@ -1,0 +1,22 @@
+class prg_tam beg
+
+  def main() beg
+
+    object(header) hd
+    object(print) p
+    
+    p = new print
+    
+    p.printcln("inicio")
+    
+    hd = new header
+    hd.idade = 10
+    hd.nome  = "TesteTesteTesteTeste"
+
+    p.printcln(hd.nome)
+    
+    p.printcln("fim")
+
+  enddef
+
+endclass

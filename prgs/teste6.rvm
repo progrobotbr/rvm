@@ -1,0 +1,33 @@
+class teste6 beg
+  
+  def main() beg
+   
+    object(header) hd
+    object(print) p
+    table(header) tb
+    int i
+    int rc
+    
+    p.printcln("inicio")
+    
+    hd = new header
+    
+    --rc = tb.insert(hd,5)
+    tb.append(hd)
+    
+    tb.read(5)
+    hd = tb.get()
+    while( i < tb.size() ) beg
+      tb.read(i)
+      hd=tb.get()
+      i=i+1
+    endwhile
+    
+    --p.printi(tb.rc)
+    p.printcln("fim")
+    --tb.modify(p,10)
+    --tb.append(p)
+    
+  enddef
+  
+endclass

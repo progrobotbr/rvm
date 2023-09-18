@@ -1,0 +1,123 @@
+MAIN:
+new 6
+storv 7
+new 7
+storv 4
+loadc 9
+loadv 4
+ocallf 8
+loadv 4
+loadc 10
+storvy 3
+new 7
+storv 4
+loadc 11
+loadv 4
+ocallf 8
+loadv 4
+loadc 12
+storvy 3
+new 7
+storv 4
+loadc 13
+loadv 4
+ocallf 8
+loadv 4
+loadc 14
+storvy 3
+new 7
+storv 4
+loadc 15
+loadv 4
+ocallf 8
+loadv 4
+loadc 16
+storvy 3
+new 7
+storv 4
+loadc 17
+loadv 4
+ocallf 8
+loadv 4
+loadc 18
+storvy 3
+loadc 10
+storv 0
+loadv 0
+loadc 19
+lt
+iffalse 60
+loadv 0
+loadvy 3
+storv 5
+loadv 5
+loadv 7
+ocallf 20
+loadv 0
+loadc 12
+add
+storv 0
+goto 45loadc 22
+loadv 7
+ocallf 21
+loadc 10
+storv 0
+loadv 0
+loadc 18
+lt
+iffalse 124
+loadc 10
+storv 1
+loadv 1
+loadc 18
+lt
+iffalse 119
+loadv 0
+loadvy 3
+storv 5
+loadv 1
+loadvy 3
+storv 6
+loadv 6
+loadv 5
+ocallf 23
+storv 2
+loadv 5
+loadv 7
+ocallf 24
+loadc 26
+loadv 7
+ocallf 25
+loadv 6
+loadv 7
+ocallf 20
+loadv 5
+oloadv 4
+loadv 7
+ocallf 27
+loadv 5
+oloadv 4
+loadv 2
+eq
+iffalse 114
+loadc 28
+loadv 7
+ocallf 21
+loadv 6
+loadv 0
+storvy 3
+loadv 5
+loadv 1
+storvy 3
+loadc 10
+storv 1
+loadv 1
+loadc 12
+add
+storv 1
+goto 71loadv 0
+loadc 12
+add
+storv 0
+goto 65end 
+

@@ -1,0 +1,72 @@
+class teste9 beg
+  
+  def put(object(header) h, char c[], int ii) beg
+    h.idade = ii
+    h.nome = c
+  enddef
+ 
+  
+  def main() beg
+   
+    object(header) hd
+	object(wrecord) wr
+	object(string) s
+    object(print) p
+    table(wrecord) tb
+	object(stringbuilder) sb
+	
+    int i
+    int zz
+    int rc
+    
+    p = new print
+    
+    p.printcln("inicio")
+    
+    p.printcln("fase1")
+    
+	
+	zz=1
+    while(zz<100000) beg
+      --hd = new header
+      --put(hd,"bocoyo",zz)
+      --p.printi(hd.idade)
+      --p.printc("-")
+      --p.printcln(hd.nome)
+	  wr = new wrecord
+	  s = new string
+	  sb = new stringbuilder
+	  
+	  sb.appendca("NOME")
+	  sb.appendint(zz)
+	  s.string(sb.mbuf)
+	  --s.string("Teste")
+	  wr.nome = s
+      rc = tb.append(wr)
+      --rc=tb.delete(1)
+      zz=zz+1
+    endwhile
+    
+	p.printiln(tb.size())
+    p.printcln("fase2")
+	
+	zz = 99999
+    while(zz>1) beg
+	  wr = tb.get(zz)
+	  p.println(wr.nome)
+      --p.printc("-")
+      --p.printcln(hd.nome)
+	  rc=tb.delete(zz)
+      zz=zz-1
+    endwhile
+	
+	p.printcln("fase3")
+	
+	p.printiln(tb.size())
+    wr = tb.get(1)
+	p.println(wr.nome)
+	
+	
+  enddef
+
+endclass

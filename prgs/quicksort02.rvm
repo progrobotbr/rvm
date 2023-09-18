@@ -1,0 +1,124 @@
+class quicksort02 beg
+
+int idx
+int gtam 
+int vv[6]
+  
+def int partition(int pbegin, int pend) beg
+    int i
+	int j
+	int vv_j
+	int zz
+	int pivot 
+	int swapTemp
+	int v1 
+	int v2
+	object(print) p 
+	
+	p = new print
+	
+	pivot = vv[pend]
+    i = pbegin-1
+    
+	j = pbegin
+    while(j < pend) beg
+	    vv_j = vv[j]
+		p.printiln(vv_j)
+            
+	    if(vv_j <= pivot) beg
+		    
+            i = i + 1
+			
+            swapTemp = vv[i]
+			v1 = vv[j]
+			vv[i] = v1
+            vv[j] = swapTemp
+			
+        endif
+		j = j + 1
+    endwhile
+
+    v2 = i+1
+	v1 = vv[pend]
+    swapTemp = vv[v2]
+    vv[v2] = v1
+    vv[pend] = swapTemp
+
+    return(i+1)
+	
+enddef
+
+def quickSort(int pbegin, int pend) beg
+    if(pbegin < pend) beg
+        int partitionIndex
+		partitionIndex = partition(pbegin, pend)
+
+        quickSort(pbegin, partitionIndex-1)
+        quickSort(partitionIndex+1, pend)
+    endif
+enddef
+
+def main() beg
+  int i
+  int z
+  int zz
+  int tt
+  int dd
+  --object(string) vv[5]
+  object(string) s
+  object(string) sa
+  object(string) sb
+  object(print) p 
+  object(lang_util) lu
+  
+  idx = 0
+  gtam = 300
+  p = new print
+  lu = new lang_util
+  
+  vv[0] = 10
+  vv[1] = 50
+  vv[2] = 29
+  vv[3] = 18
+  vv[4] = 15
+  vv[5] = 6
+  int zzz
+  zzz=0
+  
+  --
+  -- Preenchde 
+  --
+  --gtam = lu.len(vv) - 12
+  --while(zzz<gtam) beg
+  --  put(as(zzz,"_Eduardo"))
+  --  zzz = zzz + 1
+  --endwhile
+ 
+  --
+  -- Mostra dados
+  --
+  idx = 6
+  i=0
+  while(i < idx) beg
+    dd = vv[i]
+    p.printiln(dd)
+    i = i + 1
+  endwhile
+ 
+  p.printcln("-- Inicio ordenacao --")	
+  
+  quickSort(0, 5)
+  
+  p.printcln("-- Fim ordenacao --")	
+  idx = 6
+  i=0
+  while(i < idx) beg
+    dd = vv[i]
+	p.printiln(dd)
+	i = i + 1
+  endwhile
+
+enddef
+
+
+endclass

@@ -1,0 +1,64 @@
+class teste211 beg
+
+  def main() beg
+  
+    char nome1[]
+	char nome2[]
+	object(string) s1
+	object(string) s2
+	object(print) p
+	int i
+	int t
+	int r
+	char c
+	char esp
+	char xx
+	p = new print
+	s1 = new string
+	s2 = new string
+	nome1 = "Daniela"
+	nome2 = "Renato"
+	
+	s1.string(nome1)
+	s2.string(nome2)
+	
+	i = 0
+	t = 0
+	c = " "
+	esp = " "
+	xx = "X"
+	
+	while(i<10) beg
+	
+	  t = t + 1
+	  
+	  if(c == esp) beg
+	    p.xprint(i)
+		p.xprint(" ")
+	    p.xprintln(nome1)
+      else
+	    p.xprint(i)
+		p.xprint(" ")
+	    p.xprintln(nome2)
+	  endif
+	  
+	  if(t == 4) beg
+	  
+	    if( c == esp ) beg
+		  c = "X"
+		else
+		  c = " "
+		endif
+		
+		t = 0
+		
+	  endif
+	  
+	  i = i + 1
+	  
+	endwhile
+	 
+  enddef
+  
+  
+endclass

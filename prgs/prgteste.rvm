@@ -1,0 +1,34 @@
+class prgteste
+beg 
+  char o 
+  char b1 
+  def calc(int v1, int v2) beg 
+    int u 
+    int a 
+    int z 
+    z = v1 * v2 
+    --return(z) 
+  enddef
+  
+  def calc2(char v1, char v2, object(teste) v4) beg
+ 
+    object(teste) classname1 
+    object(teste2) cls2 
+
+    classname1 = new teste 
+    cls2=new teste2
+    a.i = 10
+    a.calc(5,10)
+    cls2=v4 
+    int z 
+    char a 
+
+    calc2(o,b1, z) 
+    v1 = v1 + v2 
+    if (z > 10) 
+    beg 
+      z=z+2 
+    end 
+    --return(z) 
+  enddef 
+endclass 

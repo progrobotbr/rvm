@@ -1,0 +1,45 @@
+class teste212 beg
+
+  def main() beg
+  
+    char nomedu[]
+	char nomeren[]
+	object(string) s1
+	object(string) s2
+	object(print) p
+	
+	int i
+	int t
+	int r
+	char c
+	char esp
+	char xx
+	p = new print
+	
+	s1 = new string
+	s2 = new string
+	
+	s1.string("Renato")
+	s2.string("Renato")
+	
+	c = " "
+	xx = "X"
+	esp = " "
+	if( c == esp ) beg
+	  p.xprintln("X")
+	else
+	  p.xprintln("Branco")
+	endif
+	
+	if(s1.equals(s2)) beg
+	  p.xprintln("OK")
+	else
+	  p.xprintln("NOK")
+	endif
+	
+	
+  
+  enddef
+  
+  
+endclass

@@ -1,0 +1,5 @@
+class wrecord1 beg
+
+  char nome[]
+  
+endclass 

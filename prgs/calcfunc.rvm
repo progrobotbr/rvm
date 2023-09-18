@@ -1,0 +1,18 @@
+class calcfunc beg
+
+  def int calc(int p1, int p2) beg
+    int i
+    i = p1 * p2
+    return(i)
+  enddef
+  
+  def main() beg
+    int res
+    object(print) p
+    p = new print
+    res = calc( 2 + 5 * 3, 2 * 5 + calc(5,3))
+    p.printiln(res)
+  
+  enddef
+  
+endclass

@@ -1,0 +1,96 @@
+class teste209 beg
+
+  --
+  -- primeira utilizacao do xprint 
+  --   xprint serve para imprimir int, long, float, char e char[]
+  -- 
+  def main() beg
+  
+    char c
+    int i
+	int itam
+	long l
+	long ltam
+	float f
+	object(string) s
+	object(print) p
+	char mbuf[6]
+	char mbuf2[]
+	object(string) ss
+	s=new string
+	p=new print
+		
+	l = 0 
+	
+	ltam = 99999999
+	
+	--p.print(s)
+	
+	i = 0
+	itam = 15000
+	while(l<ltam) beg
+	  --p.print(s)
+	  --p.xprintln(l)
+	  mbuf2 = "teste"
+	  ss = new string
+	  ss.string("teste")
+	  l=l+1
+	  
+	endwhile
+  	
+	p.xprintln("Fim")
+	
+	i = 2
+	l = 123456789
+	
+	f = 2.55
+	
+	--l = f + 123456789 + l
+
+    
+
+	p.xprint("Impressao long->")
+	
+	s.string("Teste")
+	
+	p.xprintln(l)
+	
+	l = l + l + l + l  +l + f
+	
+	p.xprintln(l)
+	
+	p.xprint(" int->")
+	
+	p.xprint(i)
+	
+	p.xprint(" float->")
+	
+	p.xprint(f)
+	
+    
+    mbuf[0] = "R"
+	mbuf[1] = "e"
+	mbuf[2] = "n"
+	mbuf[3] = "a"
+	mbuf[4] = "t
+	mbuf[5] = "o"
+	
+	p.xprint(" char->")
+	
+	c = "X"
+	
+	p.xprint(c)
+		
+	p.xprint(" char[]->")
+	
+	p.xprintln(mbuf)
+	
+	p.xprint(s)
+	
+	p.print(s)
+	
+	char zbuf[99999999]
+	
+  enddef
+  
+endclass

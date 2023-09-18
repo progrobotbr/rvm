@@ -1,0 +1,17 @@
+class teste13 beg
+
+  def main() beg
+    object(stringbuilder) os
+    object(print) p
+    int zz
+    zz=1
+    p = new print
+    
+    os = new stringbuilder
+    os.appendca("aaoyo")
+    os.appendint(zz)
+    p.printcln(os.mbuf)
+      
+  enddef
+  
+endclass

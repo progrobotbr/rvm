@@ -1,0 +1,109 @@
+class print beg
+
+  defnative char[] __concati(char arr[], int i)
+  defnative __print(char arr[])
+  defnative __printn(int i)
+  defnative __printf(float f)
+  defnative __printl(long l)
+  defnative __printent()
+  defnative __xprint(object(__var__) obj)
+  defnative float __trunc(float f, int qtdcasa)
+  
+  def float trunc(float f, int qtdcasa) beg
+     float f1
+     f1 = __trunc(f,qtdcasa)
+     return(f1)
+  enddef
+
+  def printi(int pi) beg
+    
+    __printn(pi)
+
+  enddef
+
+  def printc(char arr[]) beg
+
+    __print(arr)
+
+  enddef
+  
+  def printcln(char arr[]) beg
+  
+    __print(arr)
+    __printent()
+  
+  enddef
+  
+  def printiln(int i) beg
+    
+    __printn(i)
+    __printent()
+    
+  enddef
+
+  def printf(float f) beg
+
+    __printf(f)
+    
+  enddef
+
+  def printfln(float f) beg
+
+    __printf(f)
+    __printent()
+    
+  enddef
+  
+  def print_long(long l) beg
+
+    __printl(l)
+    
+  enddef
+
+  def print_long_enter(long l) beg
+
+    __printl(l)
+    __printent()
+    
+  enddef
+  
+  def xprint(object(__var__) obj) beg
+
+    __xprint(obj)
+    
+  enddef
+  
+  def xprintln(object(__var__) obj) beg
+
+    __xprint(obj)
+    __printent()
+    
+  enddef
+  
+  
+  def enter() beg
+    __printent()
+  enddef
+  
+  def print(object(string) s) beg
+    char ch[]
+    ch = s.getchar()	
+    __print(ch)
+  enddef
+  
+  def println(object(string) s) beg
+    char ch[]
+    ch = s.getchar()	
+    __print(ch)
+	__printent()
+  enddef
+  
+  def int calc(int i1, int i2) beg
+    int i
+    i = i1 * i2
+    i = 10 /0
+    return(i)
+  enddef
+
+endclass
+

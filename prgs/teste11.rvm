@@ -1,0 +1,177 @@
+class teste11 beg
+  
+  def put(object(header) h, char c[], int ii) beg
+    h.idade = ii
+    h.nome = c
+  enddef
+ 
+  
+  def mainaux() beg
+   
+    object(header) hd
+    object(print) p
+    table(header) tb
+    object(stringbuilder) os
+    
+    int i
+    int zz
+    int rc
+    char cc[] 
+    
+    p = new print
+    
+    
+    p.printcln("inicio")
+    
+    p.printcln("fase1")
+    
+    while(zz<=50000) beg
+      hd = new header
+      os = new stringbuilder
+      os.appendca("aaoyo")
+      os.appendint(zz)
+      --p.printcln("aaoyo")
+      --p.printiln(zz)
+      p.printcln(os.mbuf)
+      put(hd,os.mbuf,zz)
+      --p.printcln(":")
+      --p.printiln(zz)
+      --p.printcln("@6")
+      rc = tb.append(hd)
+      zz=zz+1
+    endwhile
+    
+    --rc = tb.size()
+    --zz = 1
+    --while (zz < rc) beg
+    --  hd = tb.get(zz)
+    --   p.printcln(hd.nome)
+    --  zz=zz+1
+    --endwhile
+    
+    
+    --int zzz1
+    --int zzz2
+    --int zzz3
+    --
+    --zzz1 =1
+    --zzz2 =1
+    --zzz3 =1
+    --
+    --
+    --while (zzz1 < 10000000) beg
+    --  zzz1 = zzz1 +1
+    --  while (zzz2 < 10000000) beg
+    --        zzz2 = zzz2 +1
+    --        while (zzz3 < 10000000) beg
+    --          zzz3 = zzz3 + 1
+    --          p.printiln(zzz3)
+    --        endwhile
+    --        
+    --  endwhile
+    --endwhile
+    --
+    
+    p.printcln("p1")
+    
+    hd = new header
+    hd.idade = 1000
+    p.printcln("p2")
+    hd.nome = "kkkkkkk"
+    p.printcln("p3")
+    tb.modify(hd,150000)
+     p.printcln("p4")
+     rc = tb.size()
+      p.printiln(rc)
+
+    --nao tem checagem de fim
+    hd = tb.get(1500)
+     p.printcln("p5")
+    
+    
+    
+    p.printcln(hd.nome)
+    p.printcln("p6")
+    hd = tb.get(1500)
+    p.printcln("p61/2")
+    p.printcln(hd.nome)
+    p.printcln("p7")
+    --rc=tb.delete(1500)
+    hd = tb.get(3)
+    p.printcln(hd.nome)
+    p.printiln(rc)
+    
+    --rc=tb.delete(1500)
+    hd = tb.get(3)
+    p.printcln(hd.nome)
+    p.printiln(rc)
+    rc = tb.size()
+    p.printiln(rc)
+    p.printcln("fase2")
+    
+    rc = tb.size()
+    p.printiln(rc)
+    zz=rc - 11
+    while(zz>0) beg
+      --p.printcln("teste")
+      rc=tb.delete(zz)
+       --hd = tb.get(zz)
+       --p.printcln(hd.nome)
+      rc = tb.size()
+      p.printcln("rr")
+      p.printiln(rc)
+      zz=zz-1
+    endwhile
+    
+    rc = tb.size()
+    p.printiln(rc)
+    
+    --zz=50000
+    --while(zz>1) beg
+    --  hd = tb.get(zz)
+    --  p.printcln(hd.nome)
+    --  zz=zz-1
+    --endwhile
+    
+  enddef
+  
+  def main() beg
+    object(header) hd
+    object(print) p
+    table(header) tb
+    object(stringbuilder) os
+    int zz
+    int rc
+    
+    mainaux()
+    --mainaux()
+    --mainaux()
+    --mainaux()
+    --mainaux()
+    
+    p = new print
+    
+    p.printcln("xfase3")
+    
+    while(zz<10) beg
+      hd = new header
+      os = new stringbuilder
+      os.appendca("aacoyoabcdefghi")
+      os.appendint(zz)
+      put(hd,os.mbuf,zz)
+      p.printcln(hd.nome)
+      rc = tb.append(hd)
+      zz=zz+1
+    endwhile
+    
+    zz=tb.size()-1
+    while(zz>=0) beg
+      rc = tb.delete(zz)
+      rc = tb.size()
+      p.printiln(rc)
+      zz=zz-1
+    endwhile
+  
+  enddef
+
+endclass

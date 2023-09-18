@@ -1,0 +1,22 @@
+class teste203 beg
+
+def main() beg
+  int v
+  int ii[4]
+  object(print) pp
+  ii[0] = 1
+  ii[1] = 2
+  ii[2] = 3
+  ii[3] = 4
+  
+  pp = new print
+  
+  v = ii[1+2]
+  
+  pp.printiln(v)
+	 
+
+enddef
+
+
+endclass

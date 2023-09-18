@@ -1,0 +1,78 @@
+class quicksort beg
+
+--
+-- quicksort com strings - rotina base
+--
+
+int idx
+int gtam 
+object(string) vv[]
+  
+def int partition(int pbegin, int pend) beg
+    int i
+	int j
+	int zz
+	int v1
+	int v2
+	object(string) swapTemp
+	object(string) pivot
+	object(string) sa
+	object(string) sb
+	object(print) pp
+	
+	pivot = vv[pend]
+    i = pbegin-1
+    
+	j = pbegin
+    while(j < pend) beg
+	    sa = vv[j]
+	    zz = sa.compare(pivot)
+		
+        if(zz == sa.menor || zz == sa.igual) beg
+		   
+            i = i + 1
+			sa = vv[i]
+            swapTemp = sa
+			sa = vv[j]
+            vv[i] = sa
+            vv[j] = swapTemp
+		endif
+		j = j + 1
+    endwhile
+
+    v1 = i+1
+    swapTemp = vv[i+1]
+	sa =  vv[pend]
+    vv[i+1] = sa
+    vv[pend] = swapTemp
+
+    return(i + 1)
+	
+enddef
+
+def __quickSort(int pbegin, int pend) beg
+    if(pbegin < pend) beg
+        int partitionIndex
+		int v1
+		int v2
+		
+		partitionIndex = partition(pbegin, pend)
+
+        v1 = partitionIndex-1
+		v2 = partitionIndex+1
+        __quickSort(pbegin, v1)
+        __quickSort(v2, pend)
+    endif
+  
+enddef
+
+def quickSort(object(string) pvm[], int pbegin, int pend) beg
+
+  vv = pvm
+  __quickSort(pbegin, pend)
+ 
+  
+enddef
+
+endclass
+

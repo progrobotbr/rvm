@@ -1,0 +1,6 @@
+class header beg
+
+   char nome[10]
+   int  idade
+
+endclass

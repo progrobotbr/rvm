@@ -1,0 +1,29 @@
+class teste200 beg
+
+def main() beg
+
+  object(print) p
+  p = new print
+
+  char c[3]
+
+  c[0] = "R"
+  c[1] = "E"
+  c[2] = "N"
+
+p.printcln(c)
+
+  char d[]
+
+  d = newarray(char,5)
+
+  d[0] = "A"
+  d[1] = "T"
+  d[2] = "O"
+
+p.printcln(d)
+  
+
+enddef
+
+endclass

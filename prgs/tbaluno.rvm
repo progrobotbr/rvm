@@ -1,0 +1,84 @@
+class tbaluno beg
+  --
+  -- 
+  --
+  --def pprint(object(waluno) pwa) beg
+  --   object(print) p1
+  --   p1 = new print
+  --   p1.printcln(pwa.nome)
+  --   p1.printiln(pwa.codaluno)
+  --enddef
+  --
+  
+  def table(waluno) pprint(table(waluno) ptb, int pi) beg
+    object(print) p1
+    object(waluno) wa
+    wa = ptb.get(pi)
+    p1 = new print
+    p1.printcln(wa.nome)
+    p1.printiln(wa.codaluno)
+    return(ptb)
+  enddef
+
+  def object(print) getprint() beg
+    object(print) p1
+    p1 = new print
+    return(p1)
+  enddef
+  
+  def main() beg
+   
+    object(waluno) oaluno
+    object(waluno) oaluno2
+    object(print) p
+    object(print) p1
+    object(print) p2
+    table(waluno) tb
+    table(waluno) tb1
+    char cod[5]
+    char c
+    int a[]
+    
+    a = newarray(int,10)
+    a[0] = 1
+    --p2.printcln("RENATO")
+    --c = cod[10]
+    p = new print
+    p.printiln(a[0])
+    oaluno = new waluno
+    oaluno.codaluno = 15
+    oaluno.nome     = "Renato Alves de Lima"
+    oaluno.endereco = "Rua Giacomo Versolato, 21"
+    --oaluno.endereco = oaluno.dsd
+    tb.append(oaluno)
+    --kk = 1
+    oaluno = new waluno
+    oaluno.codaluno = 32
+    oaluno.nome     = "Daniela Leal Lima"
+    oaluno.endereco = "Rua Giacomo Versolato, 21"
+    oaluno.endereco = oaluno.endereco
+    tb.append(oaluno)    
+    
+    tb1 = pprint(tb,1)
+
+    pprint(tb1,1)
+    pprint(tb1,2)
+
+    pprint(tb,2)
+
+    p1 = getprint()
+
+    p1.printcln("ok funcionou")
+
+    --oaluno2 = tb.get(1)
+    --pprint(oaluno2)
+    --oaluno2 = tb.get(2)
+    --pprint(oaluno2)
+    
+    --tb.delete(1)
+    --oaluno2 = tb.get(1)
+    --pprint(oaluno2)
+    
+  enddef
+
+endclass

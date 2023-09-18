@@ -1,0 +1,251 @@
+class sort03 beg
+
+ --
+ -- Sort com objeto string 19/08/2021 
+ --
+
+ -- atributos
+ table(waluno) gtb
+ table(wrecord1) gtbrec
+ 
+ -- set/defs
+ def settablerecord(table(wrecord1) ptb) beg
+    gtbrec = ptb
+ enddef
+ 
+ def table(wrecord1) getablerecord() beg
+   table(wrecord1) tb
+   tb = gtbrec
+   return(tb)
+ enddef
+ 
+ --
+ -- funcoes basicas
+ --
+ def int sort(table(wrecord1) ptb) beg
+ 
+  int i
+  int z
+  int t
+  int zz
+  table(wrecord1) ptb
+  object(wrecord1) w
+  object(wrecord1) wt1
+  object(wrecord1) wt2
+  object(print) p 
+  object(string) s1
+  object(string) s2 
+  
+  --ptb = gettablerecord()
+  
+  i = 1
+  t = ptb.size()
+  p = new print
+  s1 = new string
+  s2 = new string
+ 
+    
+  if(t==0) beg
+    return(0)
+  endif
+  
+  --
+  -- lista base desordenada
+  --
+  p.printcln("-------------------")
+  p.printcln(" Base desordenada")
+  p.printcln("-------------------")
+  
+  i=1
+  while(i <= t) beg
+    wt1 = ptb.get(i)
+	s1.string(wt1.nome)
+	p.println(s1)
+	i=i+1
+  endwhile
+  
+  p.printcln("-------------------")
+  p.printcln(" Base ordenada")
+  p.printcln("-------------------")
+  
+  i=1
+  while(i <= t) beg
+   
+   z = 1
+   while(z<=t) beg
+    wt1 = ptb.get(i)
+	s1.string(wt1.nome)
+	wt2 = ptb.get(z)
+	s2.string(wt2.nome)
+	zz = s1.compare(s2)
+	if(zz == s1.menor) beg
+	  ptb.modify(wt2,i)
+	  ptb.modify(wt1,z)
+	  z = 1
+	endif
+    z=z+1
+   endwhile
+   
+   --p.printcln("saiu 2 string")
+   
+   i=i+1
+  
+  endwhile
+  
+  i=1
+  while(i<= t) beg
+    wt1 = ptb.get(i)
+  	s1.string(wt1.nome)
+	p.printi(i)
+	p.printc("-")
+  	p.println(s1)
+  	i=i+1
+  endwhile
+ 
+ enddef
+ 
+ def put(table(wrecord1) ptb, char pnome[]) beg
+ --def put(char pnome[]) beg
+   object(wrecord1) wa
+   table(wrecord1) tb
+   
+   --tb = getablerecord()
+   
+   wa = new wrecord1
+   wa.nome = pnome
+   ptb.append(wa)
+   
+ enddef
+ 
+ def lprint(int i) beg
+   table(waluno) ltb
+   object(waluno) wa
+   object(print) p
+   
+   p = new print 
+   ltb = gtb
+   wa = ltb.get(i)
+   p.printcln(wa.nome)
+   
+ enddef
+  
+ def main() beg
+ 
+   object(string) s[10]
+   object(wrecord1) wa
+   table(wrecord1) tb
+   table(waluno) tbaluno
+   object(print) p
+   object(waluno) waluno 
+      
+   p = new print
+   --settablerecord(tb)
+   
+   waluno = new waluno
+   waluno.nome = "TESTE"
+   
+   tbaluno.append(waluno)
+   --gtb = tbaluno
+   
+   --lprint(1)
+   
+   --p.print(s)
+   
+   put(tb,"Eduardo")
+   put(tb,"Fernanda")
+   put(tb,"Jubscreuda")
+   put(tb,"Daniela")
+   put(tb,"Giovanna")
+   put(tb,"Renato")
+   put(tb,"Miguel")
+   put(tb,"Azarel")
+   put(tb,"Coringa")
+   put(tb,"Luciana")
+   put(tb,"Zuzu")
+   put(tb,"Zuza")
+   put(tb,"Daniel")
+   put(tb,"Ozita")
+   put(tb,"Romer")
+   put(tb,"Valter")
+   put(tb,"Jeca")
+   put(tb,"Marcos")
+   put(tb,"Nair")
+   put(tb,"Carlos")
+    put(tb,"Miguel")
+   put(tb,"Azarel")
+   put(tb,"Coringa")
+   put(tb,"Luciana")
+   put(tb,"Zuzu")
+   put(tb,"Zuza")
+   put(tb,"Daniel")
+   put(tb,"Ozita")
+   put(tb,"Romer")
+   put(tb,"Valter")
+   put(tb,"Jeca")
+   put(tb,"Marcos")
+   put(tb,"Nair")
+   put(tb,"Carlos")
+    put(tb,"Miguel")
+   put(tb,"Azarel")
+   put(tb,"Coringa")
+   put(tb,"Luciana")
+   put(tb,"Zuzu")
+   put(tb,"Zuza")
+   put(tb,"Daniel")
+   put(tb,"Ozita")
+   put(tb,"Romer")
+   put(tb,"Valter")
+   put(tb,"Jeca")
+   put(tb,"Marcos")
+   put(tb,"Nair")
+   put(tb,"Carlos")
+    put(tb,"Miguel")
+   put(tb,"Azarel")
+   put(tb,"Coringa")
+   put(tb,"Luciana")
+   put(tb,"Zuzu")
+   put(tb,"Zuza")
+   put(tb,"Daniel")
+   put(tb,"Ozita")
+   put(tb,"Romer")
+   put(tb,"Valter")
+   put(tb,"Jeca")
+   put(tb,"Marcos")
+   put(tb,"Nair")
+   put(tb,"Carlos")
+    put(tb,"Miguel")
+   put(tb,"Azarel")
+   put(tb,"Coringa")
+   put(tb,"Luciana")
+   put(tb,"Zuzu")
+   put(tb,"Zuza")
+   put(tb,"Daniel")
+   put(tb,"Ozita")
+   put(tb,"Romer")
+   put(tb,"Valter")
+   put(tb,"Jeca")
+   put(tb,"Marcos")
+   put(tb,"Nair")
+   put(tb,"Carlos")
+   
+   int v
+   object(stringbuilder) sb
+   object(string) ss
+   
+   ss = new string
+   
+   --v = 1
+   --while(v<=15) beg
+	-- sb = new stringbuilder
+	-- sb.appendca("Teste_")
+	-- sb.appendint(v)
+	-- put(tb,sb.mbuf)
+	 
+	 --v=v+1
+   --endwhile
+   
+   sort(tb)
+    
+ enddef
+ 
+endclass

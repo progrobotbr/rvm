@@ -1,0 +1,37 @@
+class obj_teste beg
+
+def main() beg
+
+  int i
+  int z
+  object(obj1) oc 
+  object(obj1) moc[3]
+  
+  oc = new obj1 
+  oc.i = 1
+  moc[0] = oc
+  
+  oc = new obj1 
+  oc.i = 2
+  moc[1] = oc
+  
+  oc = new obj1 
+  oc.i = 3
+  moc[3] = oc
+  
+  i=0
+
+ object(print) p
+    p = new print
+  
+  while(i<=2) beg
+      
+    p.printI(i)
+
+    i = i + 1
+  
+  endwhile
+
+enddef
+
+endclass

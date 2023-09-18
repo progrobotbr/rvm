@@ -1,0 +1,32 @@
+class teste21 beg
+  
+  def main() beg
+    int i
+	char c
+    char cc[15]
+	object(string) dd[17]
+    object(lang_util) u
+	object(print) p
+	
+	u = new lang_util
+	p = new print
+	
+	--i = u.isarray(cc)
+	--p.printiln(i)
+	
+	--p.printcln("teste")
+	--i = u.isarray(c)
+	--p.printiln(i)
+	
+	--p.printcln("teste")
+	i = u.len(dd)
+	p.printiln(i)
+	if(u.isarray(c)) beg
+	  p.printcln("cc e array")
+	endif
+	
+
+	
+  enddef
+  
+endclass

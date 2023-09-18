@@ -1,0 +1,18 @@
+class teste7 beg
+
+  def main() beg
+  
+    object(header) hd
+    object(print) p
+    int i
+    p = new print
+    while(i<30000) beg
+      hd = new header
+      p.printiln(i)
+      i=i+1
+    endwhile
+  
+  enddef
+
+
+endclass

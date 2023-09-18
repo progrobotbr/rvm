@@ -1,0 +1,26 @@
+class testenat beg
+
+  defnative char[] concat(char arr[], int i)
+  
+  defnative print(char arr[])
+
+  def main() beg
+     char larr[]
+     int i
+     --i = 11
+     --larr = concat(larr, i)
+     --i = 222
+     --larr = concat(larr, i)
+     --print(larr)
+     ---larr = concat(larr, 333)
+    
+     i = 10 + ( 230 - 5 ) * 2
+     larr = concat(larr, i)
+
+     print(larr)
+
+     
+     
+  enddef
+
+endclass

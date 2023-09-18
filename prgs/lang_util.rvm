@@ -1,0 +1,46 @@
+class lang_util beg
+
+  --
+  -- o tipo __VAR__ permite passar/receber parâmetros genericos para as funcoes
+  --
+  -- definicao nativa
+
+  defnative int __lang_util_is_array(object(__var__) p1)
+  defnative int __lang_util_array_len(object(__var__) p1)
+  defnative int __lang_util_isnull(object(__var__) p1)
+  defnative object(__var__) __lang_util_create_array(object(__var__) po, int pidef)
+  defnative object(__var__) __lang_util_copy_array(object(__var__) po)
+
+  def int isarray(object(__var__) obj) beg
+    int i
+	i = __lang_util_is_array(obj)
+    return(i)
+  enddef
+  
+  def int len(object(__var__) obj) beg
+    int i
+	i = __lang_util_array_len(obj)
+    return(i)
+  enddef
+  
+  def int isnull(object(__var__) obj) beg
+    int i
+	i = __lang_util_isnull(obj)
+    return(i)
+  enddef
+ 
+  --
+  -- com base no tipo passado, cria um array no tamanho informado
+  --
+  def object(__var__) arrcreate(object(__var__) obj, int pint) beg
+    return(__lang_util_create_array(obj, pint))
+  enddef
+  
+  --
+  -- copia um array
+  --
+  def object(__var__) arrcopy(object(__var__) obj) beg
+    return(__lang_util_copy_array(obj))	
+  enddef
+
+endclass

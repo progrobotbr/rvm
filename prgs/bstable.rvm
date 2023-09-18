@@ -1,0 +1,51 @@
+class bstable beg
+
+  defnative int __append(object(__t__) self, object(__t__) lin)
+  defnative int __insert(object(__t__) self, object(__t__) lin, int index)
+  defnative int __modify(object(__t__) self, object(__t__) lin, int index)
+  defnative int __read(object(__t__) self, int index)
+  defnative int __size(object(__t__) self)
+  defnative int __delete(object(__t__) self, int index)
+  defnative object(__t__) __get(object(__t__) self, int index)
+  
+  int rc
+  object(__t__) self
+  
+  def int append(object(__t__) lin) beg
+    rc=__append(self,lin)
+    return(rc)
+  enddef
+
+  def int insert(object(__t__) lin, int index) beg
+    rc=__insert(self,lin,index)
+    return(rc)
+  enddef
+  
+  def int modify(object(__t__) lin, int index) beg
+    rc=__modify(self,lin,index)
+    return(rc)
+  enddef
+  
+  def int read(int index) beg
+    rc=__read(self,index)
+    return(rc)
+  enddef
+  
+  def int size() beg
+    int i
+    i = __size(self)
+    return(i)
+  enddef
+  
+  def object(__t__) get(int index) beg
+    object(__t__) o
+    o = __get(self, index)
+    return(o)
+  enddef
+  
+  def int delete(int index) beg
+      rc=__delete(self,index)
+      return(rc)
+  enddef
+  
+endclass

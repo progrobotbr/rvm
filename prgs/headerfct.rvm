@@ -1,0 +1,15 @@
+class headerfct beg
+
+   int tam
+   
+   def object(header) creator() beg
+   
+     object(header) oo
+     oo = new header
+     tam = tam + 1
+     return(oo)
+     
+   enddef
+   
+
+endclass

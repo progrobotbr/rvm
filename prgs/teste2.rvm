@@ -1,0 +1,135 @@
+class teste2 beg
+
+  def main() beg
+  
+  
+    char c1
+    char c2
+    char c3
+    char c4
+    char c5
+    char c6
+    char c7
+    char cc[]
+    char cd[4]
+    
+    c1 = "f"
+    
+    cd[1] = c1
+    c7 = cd[1]
+    
+    object(stringbuilder) os
+    os = new stringbuilder
+    
+    object(print) p
+    p = new print
+    
+    p.printc(cc)
+    
+    cc = " alves"
+    
+    c2 = "e"
+    c3 = "n"
+    c4 = "a"
+    c5 = "t"
+    c6 = "o"
+    
+    --c1 = c3
+    os.appendc(c7)
+    os.appendc(c1)
+    os.appendc(c2)
+    os.appendc(c3)
+    os.appendc(c4)
+    os.appendc(c5)
+    os.appendc(c6)
+    os.appendca(cc)
+    os.appendca(" lima ")
+    os.appendint(123)
+    os.appendca(" - morador rua giacomo versolato")
+    cc = os.mbuf
+    
+    p.printc(cc)
+    p.enter()
+    
+    int i
+    int z
+    
+    i = 0
+    z = 2
+    while(i<10) beg
+      os.appendint(i)
+      p.enter()
+      p.printc(os.mbuf)
+      i = i + 1
+    endwhile
+    
+    p.enter()
+  
+    -------------------------
+    -- bloco estrutura
+    -------------------------
+    object(header) oh
+    object(headerfct) ohfct
+    object(header) oh1[6]
+    --oh1 = newarray(object,4)
+    
+    ohfct = new headerfct
+    
+    oh = ohfct.creator()
+    oh.nome = "Daniela Leal"
+    oh.idade = 34
+    oh1[0] = oh
+    
+    oh = ohfct.creator()
+    oh.nome = "Dudu Leal"
+    oh.idade = 2
+    oh1[1] = oh
+
+    oh = ohfct.creator()
+    oh.nome = "Fernanda Leal"
+    oh.idade = 34
+    oh1[2] = oh
+    
+    oh = ohfct.creator()
+    oh.nome = "Renato Lima"
+    oh.idade = 34
+    oh1[3] = oh
+    
+    oh = ohfct.creator()
+    oh.nome = "Bob"
+    oh.idade = 5
+    oh1[4] = oh
+    
+    os = new stringbuilder
+  
+    i=0
+    z=1
+    if( (z == 5 && i== 0) || oh.idade == 65 ) beg
+      while( i<ohfct.tam  ) beg
+        oh = oh1[i]
+        os.appendca(oh.nome)
+        os.appendca("   ")
+        i = i + 1
+      endwhile
+    else
+      if(i==0) beg
+        while(i<5) beg
+          p.printc("dentro ifelsewhile")
+          p.enter()
+          i=i+1
+        endwhile  
+      endif
+      p.enter()
+      p.printc("dentro do else")
+      p.enter()
+    endif
+    p.printc("saida do if") 
+    p.enter()
+    p.enter()
+    p.enter()
+    p.printc(os.mbuf)
+    p.enter()
+      
+  enddef
+  
+endclass

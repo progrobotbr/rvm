@@ -1,0 +1,28 @@
+class tesp beg
+
+  def main() beg
+    int i  
+    object(print) p 
+    char c[]
+    p = new print
+    
+    c = "Resultado :"
+    i = 10 * 3
+    p.printf(c)
+    p.printfi(i)
+    
+    i = 1
+    while(i<10000) beg
+      --p.printf("A")
+      i = i + 1
+      --p.printf(" N:")
+      --p.printfi(i)
+      --p.printf("-")
+      p.printf("-")
+    endwhile
+    
+    p.printf("fim")
+
+  enddef
+
+endclass

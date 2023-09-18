@@ -1,0 +1,173 @@
+class string beg
+
+  --
+  -- tamanho da string
+  --
+  defnative int __stringlen(char arr[])
+  
+  --
+  -- concatenacao
+  --
+  defnative char[] __concati(char arr[], int i)
+  defnative char[] __concatc(char arr[], char pc)
+  defnative char[] __concatca(char arr[], char arr1[])
+
+  int maior
+  int igual
+  int menor
+  
+  char str[]
+
+  def init(char ps[]) beg
+    str=ps
+  enddef
+  
+  def string(char ps[]) beg
+    str=ps
+  enddef
+
+  def int size() beg
+    int i
+    i = __stringlen(str)
+    return(i)
+  enddef
+  
+  def int equals(object(string) pstr)  beg
+    int i1
+    int i2
+    int i
+    char lc[]
+    
+    --object(print) p 
+    --p=new print
+    
+    lc = pstr.str
+    i1 = __stringlen(lc)
+    i2 = __stringlen(str)
+    
+    --p.printiln(i2)
+    if(i1 <> i2) beg
+      --p.printcln("saida 1")
+      return(0)
+    endif
+    
+   --p.printcln(lc)
+   --p.printcln(str)
+    
+    i=1
+    while(i<=i1) beg
+      --p.printiln(i)
+      if(str[i] <> lc[i]) beg
+        return(0)
+      endif
+      i=i+1
+    endwhile
+    
+    return(1)
+
+  enddef
+  
+  --
+  -- retorna maior/igual/menor
+  --
+  def int compare(object(string) pstr)  beg
+    int i
+    int la
+    int lb
+    char dstr[]
+	object(print) p
+	p  = new print
+	--p.printcln("entrei")
+	--p.printcln("entrou string")
+	
+	maior = 2
+    igual = 0
+    menor = 1
+    
+    dstr = pstr.str
+	la = __stringlen(str)
+	lb = __stringlen(dstr)
+   
+	--p.printi(la)
+	--p.printc("-")
+	--p.printi(lb)
+	--p.printc("-")
+	--p.printc(str)
+	--p.printc("-")
+	--p.printcln(dstr)
+	
+	if(la < lb) beg
+	  i=0
+      while(i<la) beg
+        if(str[i] < dstr[i]) beg
+          return(menor)
+        endif
+		if(str[i] > dstr[i]) beg
+		  return(maior)
+		endif  
+        i=i+1
+      endwhile
+      
+	  if(la == lb) beg
+  	    return(igual)
+	  else
+	    return(menor)
+      endif	  
+	
+	else
+	
+	  i=0
+      while(i<lb) beg
+	    if(str[i] > dstr[i]) beg
+          return(maior)
+        endif
+		if(str[i] < dstr[i]) beg
+		  return(menor)
+		endif  
+        i=i+1
+      endwhile
+      
+	  if(la == lb) beg
+  	    return(igual)
+	  else
+	    return(maior)
+      endif	  
+	
+	endif
+	
+  enddef
+      
+  --
+  -- concatena int
+  --
+  def appendint(int pi) beg
+  
+    str = __concati(str, pi)
+  
+  enddef
+    
+  --
+  -- concatena char
+  --
+  def appendc(char pc) beg
+      
+    str = __concatc(str, pc)
+      
+  enddef
+  
+  
+  --
+  -- concatena char array
+  --
+  def appendca(char parr[]) beg
+    --object(print) p 
+    --p=new print
+    str = __concatca(str, parr)
+    --p.printcln(str)
+  enddef
+  
+  def char[] getchar() beg
+    return(str)
+  enddef
+  
+endclass

@@ -1,0 +1,41 @@
+class teste4 beg
+
+  int tsti
+  
+  def main() beg
+  
+    object(header) oh
+    object(print) p 
+    int i 
+    int t
+    int z
+
+    i = 0
+    t = 0
+    z = 0
+
+    oh = new header
+    p =  new print
+    oh.idade = 0
+    while(i<30000) beg
+      while(t<30000) beg
+        while(z<30000) beg     
+          --oh.nome = "daniela leal"
+          --oh.idade = oh.idade + 1
+          --tsti = tsti + 1
+          z=z+1
+        endwhile
+        p.printiln(t)
+        z=0
+        t=t+1
+      endwhile
+      p.printcln("t")
+      t=0
+      i=i+1 
+    endwhile
+    
+    p.printc("fim")
+  
+  enddef
+  
+endclass

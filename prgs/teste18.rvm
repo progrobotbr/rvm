@@ -1,0 +1,57 @@
+class teste18 beg
+
+ def main() beg
+   object(print) p 
+   p = new print 
+   
+   p.printcln("Teste")
+   
+   object(string) ss[10]
+   object(string) s
+   object(string) r
+   
+   s = new string
+   s.string("R1")   
+   ss[0] = s 
+   
+   s = new string
+   s.string("S2")   
+   ss[1] = s 
+   
+   s = new string
+   s.string("T3")   
+   ss[2] = s 
+   
+   s = new string
+   s.string("Z4")   
+   ss[3] = s 
+   
+   s = ss[3]
+   p.println(s)
+   
+   s = ss[0]
+   p.println(s)
+   
+   s = ss[2]
+   p.println(s)
+   
+   s = ss[1]
+   p.println(s)
+   
+   s = ss[3]
+   r = ss[0]
+   ss[0] = s
+   ss[3] = r
+   
+   s = ss[0]
+   p.println(s)
+   
+   s = ss[3]
+   p.println(s)
+   
+ 
+ enddef
+
+endclass
+ 
+ 

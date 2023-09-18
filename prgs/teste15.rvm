@@ -1,0 +1,42 @@
+class teste15 beg
+
+  def int calc(int p1) beg
+    return(p1)
+  enddef
+  
+  def main() beg
+
+    object(print) p
+    p = new print
+    int i
+	int z
+	int i1
+	int z1
+	
+	i = 0
+	while(i<6) beg
+	  --este caso causa erro
+	  calc(i)
+	  i = i + 1
+	  p.printiln(z)
+	  
+	  i1 = 0
+	
+	  while(i1<6) beg
+	    calc(i1)
+	    i1 = i1 + 1
+		p.printc("dentro-")
+	    p.printiln(z1)
+	  
+	  endwhile
+	endwhile
+	
+    p.printcln("Esta ok 15")
+	
+	
+      
+  enddef
+  
+  int zz
+  
+endclass

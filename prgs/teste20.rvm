@@ -1,0 +1,129 @@
+class teste20 beg
+
+int idx
+int gtam 
+object(string) vv[150]
+  
+def put(char p1[]) beg
+  object(string) s
+  s = new string
+  s.string(p1)
+  vv[idx] = s 
+  idx = idx + 1
+enddef
+
+def char[] as(int i, char bf[]) beg
+ 
+   object(stringbuilder) sb
+   sb = new stringbuilder
+   sb.appendint(i)
+   sb.appendca(bf)
+   return(sb.mbuf)
+ 
+enddef
+
+def main() beg
+  int i
+  int z
+  int zz
+  --object(string) vv[5]
+  object(string) s
+  object(string) sa
+  object(string) sb
+  object(print) p 
+  object(lang_util) lu
+  
+  idx = 0
+  gtam = 300
+  p = new print
+  lu = new lang_util
+  
+  --s = new string
+  --s.string("5Zulu")
+  --vv[0] = s 
+  
+  --s = new string
+  --s.string("3Zulu")
+  --vv[1] = s 
+  
+  --s = new string
+  --s.string("1Zulu")
+  --vv[2] = s 
+  
+  --s = new string
+  --s.string("4Zulu")
+  --vv[3] = s 
+  
+  --s = new string
+  --s.string("2Zulu")
+  --idx=4
+  --vv[idx] = s 
+  
+  put("Eduardo")
+  put("Fernanda")
+  put("Jubscreuda")
+  put("Daniela")
+  put("Giovanna")
+  put("Renato")
+  put("Miguel")
+  put("Azarel")
+  put("Coringa")
+  put("Luciana")
+  put("Zuzu")
+  put("Zuza")
+  
+  int zzz
+  zzz=0
+  
+  gtam = lu.len(vv) - 12
+  while(zzz<gtam) beg
+    put(as(zzz,"_Eduardo"))
+	zzz = zzz + 1
+  endwhile
+ 
+  
+  i=0
+  while(i < idx) beg
+    sa = vv[i]
+    p.println(sa)
+    i = i + 1
+  endwhile
+ 
+  p.printcln("-- Inicio ordenacao --")	
+  
+  i=0
+  while(i<idx) beg
+  
+    z = 0
+    while(z<idx) beg
+      sa = vv[i]
+  	  sb = vv[z]
+	  zz = sa.compare(sb)
+	  if(zz == sa.menor) beg
+	    vv[i] = sb
+	    vv[z] = sa
+	    z = 0
+	  endif
+      z=z+1
+    endwhile
+   
+    i=i+1
+  
+  endwhile
+  
+  p.printcln("-- Fim ordenacao --")	
+  
+  --vv[315] = sa
+  i=0
+  while(i < idx) beg
+    sa = vv[i]
+	p.printi(i)
+	p.printc("-")
+    p.println(sa)
+    i = i + 1
+  endwhile
+
+enddef
+
+
+endclass

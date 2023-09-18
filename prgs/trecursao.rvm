@@ -1,0 +1,52 @@
+----------------------------
+-- Exemplo de recursão
+-- data: 20/07/2016
+----------------------------
+class trecursao beg
+
+  int LOOPS
+  
+  -------------
+  -- Cálculo --
+  ------------- 
+  def int calc1(int num) beg
+    int i
+    object(print) p
+    
+    -- impressão
+    p = new print
+    p.printiln(num)
+    
+    -------------
+    -- cálculo --
+    -------------
+    i = num + 1
+    
+    --------------
+    -- recursão --
+    --------------
+    if(i <= LOOPS) beg
+      i=calc1(i)
+    endif
+    
+    --saída
+    return(i)
+    
+  enddef
+  
+  -----------------------
+  -- Entrada principal --
+  -----------------------
+  def main() beg
+    int i
+    object(print) p
+    p = new print
+    
+    LOOPS = 10000000
+    i = calc1(1)
+    
+    p.printi(i)
+    
+  enddef
+
+endclass

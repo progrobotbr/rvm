@@ -1,0 +1,10 @@
+class waluno beg
+
+   int   codaluno
+   char  nome[50]
+   char  endereco[50]
+   int   idade
+   float salario
+   int   qtdefilhos   
+
+endclass

@@ -1,0 +1,24 @@
+class objarr beg
+
+  def main() beg
+  
+  --
+  -- não funciona
+  -- 
+    object(string) s[10]
+	object(string) ss
+	object(print) p
+	
+	p = new print
+	
+	p.printcln("AAA")
+	
+	ss = new string
+	ss.init("Teste")
+	s[0] = new string
+	
+	s[0] = ss
+	
+  enddef
+
+endclass

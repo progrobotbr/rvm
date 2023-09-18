@@ -1,0 +1,63 @@
+class tb_teste01 beg
+
+def exec(table(string) ts,
+         table(print) tp,
+         table(lang_util) tu) beg
+
+  int i
+  object(string) _s
+  object(print) _p
+  object(lang_util) _lu
+  object(lang_util) lu2
+  
+  _s = ts.get(1)
+  _p = tp.get(1)
+  _lu = tu.get(1)
+  
+  _p.println(_s)
+  
+  lu2 = new lang_util
+  
+  i = lu2.isarray(_s)
+  _p.printiln(i)
+  
+enddef
+
+def main() beg
+
+  int i
+  char mbuf[]
+  table(string) tb_string
+  table(print) tb_print
+  table(lang_util) tb_util
+  object(string) s
+  object(print) p
+  object(lang_util) lu
+  
+  s=new string
+  s.string("sssss")
+  p=new print
+  lu=new lang_util
+  
+  i = lu.isarray(p)
+  p.printiln(i)
+  if(i==0) beg
+    p.printcln("mbuf nao e array")
+  else
+    p.printcln("mbuf E array")
+  endif
+  
+  i = lu.isnull(p)
+  
+  mbuf = lu.arrcreate(mbuf, 14000)
+  i = lu.isarray(p)
+  
+  tb_string.append(s)
+  tb_print.append(p)
+  tb_util.append(lu)
+  
+  exec(tb_string, tb_print, tb_util)
+  
+enddef
+
+endclass

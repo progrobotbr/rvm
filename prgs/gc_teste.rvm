@@ -1,0 +1,39 @@
+class gc_teste beg
+
+  def main() beg
+
+    object(header) hd
+    table(header) tb
+    object(print) p
+    int zz
+    int rc
+
+    zz = 0
+    p = new print
+    p.printcln("inicio")
+    
+    while(zz<=900000) beg
+      zz = zz + 1
+      hd = new header
+      hd.idade = zz
+      hd.nome  = "Teste"
+      rc = tb.append(hd)
+      p.printi(zz)
+      p.printc("-__put-")
+      p.printcln(hd.nome)
+    endwhile
+
+    while(zz>0) beg
+      hd = tb.get(zz)
+      rc=tb.delete(zz)
+      p.printi(hd.idade)
+      p.printc("-")
+      p.printcln("__del")
+      zz = zz - 1
+    endwhile
+
+    p.printcln("fim")
+
+  enddef
+
+endclass

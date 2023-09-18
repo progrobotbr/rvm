@@ -1,0 +1,34 @@
+class teste201 beg
+
+--teste ---
+	
+def main() beg
+
+  int i	
+  i = 0	
+
+  if(i<10) beg
+  else
+  endif
+
+  object(print) p
+  p = new print
+	
+	
+	
+	
+  i = 9
+  if(i<10) beg 
+    p.printiln(i)
+    p.printiln(51)
+    -- break trava aqui
+    p.printiln(52)
+    p.printiln(53)
+
+  else
+    p.printc("OK")
+  endif
+
+enddef
+
+endclass

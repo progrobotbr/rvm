@@ -1,0 +1,396 @@
+class sort02 beg
+
+ --
+ -- Sort com objeto string 19/08/2021 
+ --  Bubble sort
+ -- 
+
+ -- atributos
+ --table(waluno) gtb
+ --table(wrecord) gtbrec
+ 
+ def int calc() beg
+   return(1)
+ enddef
+ 
+ -- set/defs
+ def settablerecord(table(wrecord) ptb) beg
+    table(wrecord) gtbrec
+    gtbrec = ptb
+ enddef
+ 
+ def table(wrecord) getablerecord() beg
+   table(wrecord) tb
+   table(wrecord) gtbrec
+   tb = gtbrec
+   return(tb)
+ enddef
+ 
+ --
+ -- funcoes basicas
+ --
+ def int sort(table(wrecord) ptb) beg
+ 
+  int i
+  int z
+  int t
+  int zz
+  table(wrecord) ptb
+  object(string) s1
+  object(string) s2
+  object(wrecord) w
+  object(wrecord) wt1
+  object(wrecord) wt2
+  object(print) p 
+  
+  --ptb = gettablerecord()
+  
+  i = 1
+  t = ptb.size()
+  p = new print
+  
+  while(i<100000) beg
+    calc()
+	i = i+1
+  endwhile
+  
+  i = 1
+  
+  if(t==0) beg
+    return(0)
+  endif
+  
+  --
+  -- lista base desordenada
+  --
+  p.printcln("-------------------")
+  p.printcln(" Base desordenada")
+  p.printcln("-------------------")
+  
+  i=1
+  while(i <= t) beg
+    wt1 = ptb.get(i)
+	s1 = wt1.nome
+	p.println(s1)
+	i=i+1
+  endwhile
+  
+  p.printcln("-- Inicio ordenacao --")
+  i=1
+  while(i <= t) beg
+  
+   z = 1
+   while(z<=t) beg
+    wt1 = ptb.get(i)
+	s1 = wt1.nome
+	wt2 = ptb.get(z)
+	s2 = wt2.nome
+	zz = s1.compare(s2)
+	
+	if(zz == s1.menor) beg
+	  ptb.modify(wt2,i)
+	  ptb.modify(wt1,z)
+	  z = 1
+	endif
+    z=z+1
+   endwhile
+   
+   i=i+1
+  
+  endwhile
+  
+  p.printcln("-- Fim ordenacao --")
+  
+  p.printcln("-------------------")
+  p.printcln(" Base ordenada")
+  p.printcln("-------------------")
+  i=1
+  while(i<= t) beg
+    wt1 = ptb.get(i)
+  	s1 = wt1.nome
+	p.printi(i)
+	p.printc("-")
+  	p.println(s1)
+  	i=i+1
+  endwhile
+ 
+ enddef
+ 
+ def put(table(wrecord) ptb, char pnome[]) beg
+ --def put(char pnome[]) beg
+   object(wrecord) wa
+   object(string) s
+   object(print) p
+   table(wrecord) tb
+   
+   p = new print
+   --tb = getablerecord()
+   
+   wa = new wrecord
+   s = new string
+   s.string(pnome)
+   p.printc(pnome)
+   p.printc("-")
+   p.printiln(s.size())
+   wa.nome = s
+   ptb.append(wa)
+   
+ enddef
+ 
+ def lprint(int i) beg
+   table(waluno) ltb
+   object(waluno) wa
+   object(print) p
+   
+   p = new print 
+   --ltb = gtb
+   --wa = ltb.get(i)
+   --p.printcln(wa.nome)
+   
+ enddef
+ 
+ def char[] as(int i, char bf[]) beg
+ 
+   object(stringbuilder) sb
+   sb = new stringbuilder
+   sb.appendint(i)
+   sb.appendca(bf)
+   return(sb.mbuf)
+ 
+ enddef
+  
+ def main() beg
+ 
+   object(string) s
+   object(wrecord) wa
+   object(wrecord) wr
+   table(wrecord) tb
+   table(waluno) tbaluno
+   object(print) p
+   object(waluno) waluno 
+      
+   p = new print
+   --settablerecord(tb)
+   
+   waluno = new waluno
+   waluno.nome = "TESTE"
+   
+   tbaluno.append(waluno)
+   --gtb = tbaluno
+   
+   --lprint(1)
+   
+   --p.print(s)
+   
+   s = new string 
+   s.string("Eduardo")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Fernanda")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Jubscreuda")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("ZDaniela")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Giovanna")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Renato")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Miguel")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Coringa")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Luciana")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Luciana")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+
+   s = new string 
+   s.string("Zuzu")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Zuza")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Daniel")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Ozita")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   s = new string 
+   s.string("Romer")
+   wr = new wrecord
+   wr.nome = s
+   tb.append(wr)
+   
+   p.printcln("inicio")   
+   put(tb,"Eduardo")
+   put(tb,"Fernanda")
+   put(tb,"Jubscreuda")
+   put(tb,"Daniela")
+   put(tb,"Giovanna")
+   put(tb,"Renato")
+   put(tb,"Miguel")
+   put(tb,"Azarel")
+   put(tb,"Coringa")
+   put(tb,"Luciana")
+   put(tb,"Zuzu")
+   put(tb,"Zuza")
+   put(tb,"Daniel")
+   put(tb,"Ozita")
+   put(tb,"Romer")
+   put(tb,"Valter")
+   put(tb,"Jeca")
+   put(tb,"Marcos")
+   put(tb,"Nair")
+   put(tb,"Carlos")
+   put(tb," ")
+   
+   --sort(tb)
+   
+   put(tb,"Eduardo")
+   put(tb,"Fernanda")
+   put(tb,"Jubscreuda")
+   put(tb,"Daniela")
+   put(tb,"Giovanna")
+   put(tb,"Renato")
+   put(tb,"Miguel")
+   put(tb,"Azarel")
+   put(tb,"Coringa")
+   put(tb,"Luciana")
+   put(tb,"Zuzu")
+   put(tb,"Zuza")
+   put(tb,"Daniel")
+   put(tb,"Ozita")
+   put(tb,"Romer")
+   put(tb,"Valter")
+   put(tb,"Jeca")
+   put(tb,"Marcos")
+   put(tb,"Nair")
+   put(tb,"Carlos")
+   
+   put(tb,"Eduardo")
+   put(tb,"Fernanda")
+   put(tb,"Jubscreuda")
+   put(tb,"Daniela")
+   put(tb,"Giovanna")
+   put(tb,"Renato")
+   put(tb,"Miguel")
+   put(tb,"Azarel")
+   put(tb,"Coringa")
+   put(tb,"Luciana")
+   put(tb,"Zuzu")
+   put(tb,"Zuza")
+   put(tb,"Daniel")
+   put(tb,"Ozita")
+   put(tb,"Romer")
+   put(tb,"Valter")
+   put(tb,"Jeca")
+   put(tb,"Marcos")
+   put(tb,"Nair")
+   put(tb,"Carlos")
+   
+   put(tb,"zEduardo")
+   put(tb,"zFernanda")
+   put(tb,"zJubscreuda")
+   put(tb,"zDaniela")
+   put(tb,"zGiovanna")
+   put(tb,"zRenato")
+   put(tb,"zMiguel")
+   put(tb,"zAzarel")
+   put(tb,"zCoringa")
+   put(tb,"zLuciana")
+   put(tb,"zZuzu")
+   put(tb,"zZuza")
+   put(tb,"zDaniel")
+   put(tb,"zOzita")
+   put(tb,"zRomer")
+   put(tb,"zValter")
+   put(tb,"zJeca")
+   put(tb,"zMarcos")
+   put(tb,"zNair")
+   put(tb,"zCarlos")
+   
+   put(tb,"1Eduardo")
+   put(tb,"1Fernanda")
+   put(tb,"1Jubscreuda")
+   put(tb,"1Daniela")
+   put(tb,"1Giovanna")
+   put(tb,"1Renato")
+   put(tb,"1Miguel")
+   put(tb,"1Azarel")
+   put(tb,"1Coringa")
+   put(tb,"1Luciana")
+   put(tb,"1Zuzu")
+   put(tb,"1Zuza")
+   put(tb,"1Daniel")
+   put(tb,"1Ozita")
+   put(tb,"1Romer")
+   put(tb,"1Valter")
+   put(tb,"1Jeca")
+   put(tb,"1Marcos")
+   put(tb,"1Nair")
+   put(tb,"1Carlos")
+   
+   int zzz
+   zzz=0
+ 
+   while(zzz<195) beg
+     put(tb,as(zzz,"_Eduardo"))
+	 zzz = zzz + 1
+   endwhile
+ 
+   sort(tb)
+    
+ enddef
+ 
+endclass

@@ -1,0 +1,59 @@
+class <nome>
+
+  type <name_type>
+      <name1> as int
+      <name2> as char[10]
+  endtype
+
+  dim <var1> as int,
+      <var2> as char[9], 
+      <var3> as long,
+      <var4> as float,
+      <var5> as <name_type>[]
+
+
+  function <name>(import <par1> as int      byref, 
+                         <par2> as char[10]
+                  export <par3> as <name_type>[]
+                         <par4> as int)
+
+     dim <name> as long
+     dim <namewa> as <name_type>
+     dim <obj> as <nome_obj>
+
+     <obj> = new <nome_obj>
+
+
+     <obj>.<name_func>(exporting <var1>, <var2>
+                       importing <var3>)
+
+
+     <name>=<par3>.<name_field>
+     <obj>.<name_field> = <name>
+
+     append <namewa> to <par3>
+     read <par3> into <namewa> where <name1> = <val1> and <name2> = <val2>
+     modify <tb> from <wa> index <n>
+     erase <tb> index <n>
+     
+     select ...
+     update ...
+     delete ...
+     insert ...
+
+     loop <tb> into <wa>
+     endloop
+
+     if ...
+     endif
+  
+     while ...
+     endwhile
+   
+  endfunction
+
+     
+  function
+  endfunction
+
+endclass

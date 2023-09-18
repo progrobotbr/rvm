@@ -1,0 +1,23 @@
+class teste205 beg
+
+def main() beg
+
+  object(print) p
+  char ch[]
+  char ch2[]
+  
+  p = new print
+  
+  ch = "RENATO"
+  
+  ch[2] = "X"
+  
+  p.printcln(ch)
+
+  ch2 = "RENATO"
+  p.printcln(ch2)
+  
+enddef
+
+
+endclass

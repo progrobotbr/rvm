@@ -1,0 +1,52 @@
+class teste3 beg
+
+  def main() beg
+  
+    object(header) oh
+    object(print) p
+    
+    int i 
+    int t
+    int z
+
+    i = 0
+    t = 0
+    z = 0
+
+    oh = new header
+    p  = new print
+    
+    table(header) tb1
+    workarea(header) wtb1
+    
+    append wtb1 to tb1
+    
+    while(i<30000) beg
+      while(t<30000) beg
+        while(z<30000) beg     
+          oh.nome = "daniela leal"
+          oh.idade = 34
+          --p.printi(z)
+          --p.enter()
+          z=z+1
+        endwhile
+        z=0
+        p.printi(t)
+        p.enter()
+        t=t+1
+      endwhile
+      t=0
+      p.printc("i")
+      --p.enter()
+      i=i+1 
+    endwhile
+
+    --object(stringbuilder) os
+    --os = new stringbuilder
+    --os.appendca(oh.nome)
+  
+     p.printc("fimRenato")
+      
+  enddef
+  
+endclass

@@ -1,0 +1,55 @@
+class teste5 beg
+
+  def main() beg
+  
+    object(header) oh
+    object(print) p 
+    float f 
+    int t
+    int z
+
+    z = 31555243
+    
+    f = (10 / z * ( 1.5 / ( 2 + 3 ) ) / ( 125 - 2600 ) / 7 ) +z
+
+    z = f
+
+    p =  new print
+   
+    p.printfln(f)
+    p.printiln(z)
+
+    f = p.trunc(f,4)
+    p.enter()
+    p.printfln(f)
+ 
+    p.enter()
+    p.enter()
+    p.enter()
+
+    f = f / 200806.1648
+
+    f = 157.142800
+
+    p.printfln(f)
+
+    if(f == 157.1428) beg
+      p.printcln("igual")
+    else
+      if(f < 157.1428) beg 
+        p.printcln("menor")
+      else
+        p.printcln("maior")
+       
+      endif
+    endif
+    
+    p.enter()
+    p.enter()
+    p.enter()
+    p.enter()
+    p.printcln("terminado")
+  
+  enddef
+  
+endclass

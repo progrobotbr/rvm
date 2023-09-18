@@ -1,0 +1,59 @@
+class tesp beg
+
+  def zeta(object(print) obj , int ii) beg
+     int z
+     obj = new print  
+     z = obj.calc(z,1)
+     z = 10/0
+    
+  enddef
+  
+  def int calc2(int i1, int i2) beg
+     int z
+     z = i1 + i2
+     return(z)
+  enddef
+
+  def main() beg
+    int i  
+    int z
+    object(print) p
+    object(print) oo
+    char c[]
+    
+    zeta(oo,2)
+    
+    p = new print
+    c = "Resultado :"
+    char cc
+    --i=50
+    cc = c[i]
+    i = 10 * 3
+    --i = 10 / 0
+    p.printc(c)
+    p.printiln(i)
+    p.enter()
+    
+    z = 1
+    i = 0
+    while(i<10) beg
+      i = i + 1
+      z = p.calc(z,1)
+      
+      if(i == 9999) beg
+        break
+      endif
+      
+      p.printi(i)
+      p.printc("-")
+      p.printc(" N:")
+      p.printiln(z)
+      
+    endwhile
+    p.enter()
+    p.printcln("Fim ")
+
+  enddef
+  
+ 
+endclass

@@ -1,0 +1,25 @@
+   class sec
+   beg
+     int res
+     def int calc3(int o1)
+     beg
+       o1 = 10
+     end
+     def int calc2(int p1, int p2)
+     beg
+       object(prim) obj
+       int a[]
+       a=newarray(int,2)
+       obj = new prim
+       obj.res = calc3(a)
+       obj.res = calc2(obj.res,obj.calc(obj.calc(a,a),a))
+       a[1] = 2
+       obj.calc(P1,2)
+     end
+     def object(prim) teste()
+     beg
+     end
+   end & vbCrLf
+
+3
+  

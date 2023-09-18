@@ -1,0 +1,11 @@
+class qui
+beg
+  int atrib1
+
+  def int calcmenos(int pm1, int pm2) beg
+    int resm
+    resm = pm1 + pm2
+    return(resm)
+  enddef
+
+endclass

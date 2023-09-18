@@ -1,0 +1,51 @@
+class teste206 beg
+
+def main() beg
+
+  object(lang_util) lu
+  object(print) p
+  char ch[]
+  char ch2[]
+  int i
+  
+  
+  p = new print
+  
+  p.printiln(i)
+  
+  lu = new lang_util
+  
+  ch = lu.arrcreate(ch, 4)
+  
+  i = lu.len(ch)
+  p.printiln(i)
+  
+  ch = "RENATO"
+  
+  i = lu.len(ch)
+  p.printcln(ch)
+  p.printiln(i)
+  
+  ch = lu.arrcreate(ch, 15)
+  
+  p.printcln(ch)
+  p.printiln(i)
+  
+  ch[0] = "X"
+  ch[1] = "X"
+  ch[2] = "X"
+  ch[3] = "Z"
+  ch[4] = "A"
+  
+  p.printcln(ch)
+   
+  ch = "RENATO"
+  p.printcln(ch)
+  
+  i = lu.len(ch)
+  p.printiln(i)
+  
+enddef
+
+
+endclass

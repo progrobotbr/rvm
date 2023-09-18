@@ -1,0 +1,19 @@
+; dlltool --base-file C:\Users\Renato\AppData\Local\Temp/cca01768.base --output-exp rvmbase.exp --dllname rvmbase.dll --output-def librvmbase.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\Users\Renato\AppData\Local\Temp/cca01768.def --output-lib librvmbase.a
+EXPORTS
+	CALC5 @ 1
+	__APPEND @ 2
+	__CONCATC @ 3
+	__CONCATCA @ 4
+	__CONCATI @ 5
+	__DELETE @ 6
+	__GET @ 7
+	__INSERT @ 8
+	__MODIFY @ 9
+	__PRINT @ 10
+	__PRINTENT @ 11
+	__PRINTF @ 12
+	__PRINTN @ 13
+	__SIZE @ 14
+	__STRINGLEN @ 15
+	__TBREAD @ 16
+	__TRUNC @ 17

@@ -1,0 +1,107 @@
+class sort01 beg
+
+ --
+ -- Buble sort
+ --
+ def int sort(table(waluno) ptb) beg
+ 
+  int i
+  int z
+  int t
+  char c1
+  char c2
+  char ac[1]
+  object(waluno) w
+  object(waluno) wt1
+  object(waluno) wt2
+  object(print) p 
+  
+  i = 1
+  t = ptb.size()
+  p = new print
+  
+  if(t==0) beg
+    return(0)
+  endif
+  
+  i=1
+  while(i<= t) beg
+    wt1 = ptb.get(i)
+	p.printcln(wt1.nome)
+	i=i+1
+  endwhile
+  
+  p.printcln("-------------------")
+  
+  i=1
+  while(i<= t) beg
+  
+   z = i + 1
+   while(z <= t) beg
+    wt1 = ptb.get(i)
+	wt2 = ptb.get(z)
+	c1 = wt1.nome[0] 
+	c2 = wt2.nome[0]
+	ac[0] = c1
+	--p.printc(ac)
+	ac[0] = c2
+	--p.printcln(ac)
+	if(wt1.nome[0] > wt2.nome[0]) beg
+	  --p.printcln("ok")
+	  ptb.modify(wt2,i)
+	  ptb.modify(wt1,z)
+	  break
+	endif
+    z=z+1
+   endwhile
+   i=i+1
+  endwhile
+  
+  i=1
+  while(i<= t) beg
+    wt1 = ptb.get(i)
+	p.printcln(wt1.nome)
+	i=i+1
+  endwhile
+ 
+ enddef
+ 
+ def put(table(waluno) ptb, char pnome[]) beg
+   object(waluno) wa
+   wa = new waluno
+   wa.nome = pnome
+   ptb.append(wa)
+ enddef
+ 
+ def main() beg
+ 
+   object(waluno) wa
+   table(waluno) tb
+     
+   wa = new waluno
+   wa.nome = "Eduardo"
+   tb.append(wa)
+   
+   wa = new waluno
+   wa.nome = "Andre"
+   tb.append(wa)
+   
+   wa = new waluno
+   wa.nome = "Beto"
+   tb.append(wa)
+   
+   put(tb,"Jubscreuda")
+   put(tb,"Daniela")
+   put(tb,"Giovanna")
+   put(tb,"Renato")
+   put(tb,"Miguel")
+   put(tb,"Luciana")
+   put(tb,"Ozita")
+   
+   sort(tb)
+   
+ 
+ enddef
+
+
+endclass

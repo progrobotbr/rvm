@@ -1,0 +1,29 @@
+class testenat2 beg
+
+  def main() beg
+ 
+    int i
+    object(stringbuilder) ostr
+    object(print) p
+    
+    ostr = new stringbuilder
+    p = new print
+
+    i = 1
+    while(i<10000) beg
+      ostr.appendint(2)
+      ostr.appendca("-")
+      ostr.appendint(10)
+      --p.printcln("entrou")
+      i=i+1
+    endwhile
+   
+    --ostr.appendca("Teste R")
+    ostr.println()
+        
+    p.printcln(ostr.mbuf)
+    p.printcln("renato")
+
+  enddef
+
+endclass

@@ -1,0 +1,17 @@
+class teste19 beg
+
+def main() beg
+
+  object(teste16) oo[10]
+  object(teste16) o
+  
+  oo[0] = new teste16
+  
+  o = oo[0]
+  
+  o.main()
+  
+  
+enddef
+
+endclass

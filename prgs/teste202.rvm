@@ -1,0 +1,65 @@
+class teste202 beg
+
+  def main() beg
+
+    --
+    -- declaração das variáveis 
+    --
+    int i
+    int vidx
+    object(print) p
+    table(waluno1) tb
+    object(waluno) wa
+
+    i = 0
+
+    p = new print
+    p.printcln("Ola my friend")
+
+    wa = new waluno
+    wa.nome = "Renato"
+    tb.insert(wa,1)
+
+    wa = new waluno
+    wa.nome = "Daniela"
+    tb.insert(wa,2)
+
+    wa = new waluno
+    wa.nome = "Eduardo"
+    tb.insert(wa,3)
+
+    wa = new waluno
+    wa.nome = "Teste"
+    tb.insert(wa,2)
+ 
+    object(waluno) wa2
+    wa2 = tb.get(2)
+    p.printcln(wa2.nome)
+
+    wa2 = tb.get(4)
+    p.printcln(wa2.nome)
+
+    wa2 = tb.get(1)
+    p.printcln(wa2.nome)
+    
+    vidx = 0
+ 
+    while( vidx < tb.size() ) beg
+      vidx = vidx + 1
+      wa2 = tb.get(vidx)
+      p.printc("Linha (")
+      p.printi(vidx)
+      p.printc(")->")
+      p.printcln(wa2.nome)
+      break
+    endwhile
+
+    float ff
+ 
+    ff = ( 10.6 / ( 2 + 3 ) ) -  0.5 * ( 2 + 3 )
+
+    p.printfln(ff)
+
+  enddef
+
+endclass

@@ -1,0 +1,37 @@
+class teste210 beg
+
+def exec(table(print) ptb) beg
+
+  object(print) pp
+  
+  pp = ptb.get(1)
+  
+  pp.xprint("Teste")
+  
+enddef
+
+def main() beg
+
+  object(lang_util) lu
+  object(lang_util) lu2
+  object(print) p
+  object(stringbuilder) sb
+  table(lang_util) tb 
+  table(print) tbp
+  
+  lu = new lang_util
+  p = new print
+  lu = new lang_util
+  
+  tb.append(lu)
+  
+  lu2 = tb.get(1)
+
+  tbp.append(p)
+  
+  exec(tbp)
+  
+enddef
+
+
+endclass

@@ -1,0 +1,22 @@
+class teste16 beg
+
+  object(print) gp
+  int aaa
+  
+  def display() beg
+    aaa = aaa + 90
+  enddef
+  
+  def main() beg
+  
+    gp = new print
+	gp.printc("fdfdfdffdfdfd fdffdf")
+	gp.printcln("a")
+	
+	aaa = 1
+	
+	display()
+	
+  enddef
+  
+endclass

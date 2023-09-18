@@ -1,0 +1,10 @@
+class obj1 beg
+
+  char c
+  int i
+  
+  def main() beg
+    c = "R"
+  enddef
+
+endclass

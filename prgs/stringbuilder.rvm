@@ -1,0 +1,46 @@
+class stringbuilder beg
+
+  char mbuf[]
+
+  defnative char[] __concati(char arr[], int i)
+  defnative char[] __concatc(char arr[], char pc)
+  defnative char[] __concatca(char arr[], char arr1[])
+  
+  --
+  -- concatena int
+  --
+  def appendint(int pi) beg
+
+    mbuf = __concati(mbuf, pi)
+
+  enddef
+  
+  --
+  -- concatena char
+  --
+  def appendc(char pc) beg
+    
+      mbuf = __concatc(mbuf, pc)
+    
+  enddef
+
+
+  --
+  -- concatena char array
+  --
+  def appendca(char parr[]) beg
+
+    mbuf = __concatca(mbuf, parr)
+
+  enddef
+  
+  --
+  -- imprime
+  -- 
+  def println() beg
+    object(print) p
+    p = new print
+    p.printcln(mbuf)
+  enddef
+    
+endclass

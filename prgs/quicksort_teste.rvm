@@ -1,0 +1,81 @@
+class quicksort_teste beg
+
+def put(object(string) pvv[], char cs[], int pidx ) beg
+  object(string) s1
+  s1 = new string
+  s1.string(cs)
+  pvv[pidx] = s1
+
+enddef
+
+def main() beg
+
+  int i
+  int t
+  object(string) m[9]
+  object(string) mcp[]
+  object(string) s
+  object(print) p
+  object(quicksort) q
+  object(lang_util) lu
+  object(lang_util) lu2
+  
+  p = new print
+  q = new quicksort
+  lu = new lang_util
+  
+  put(m,"T11",0)
+  put(m,"T5",1)
+  put(m,"T2",2)
+  put(m,"T1",3)
+  put(m,"F15",4)
+  put(m,"D5",5)
+  put(m,"B15",6)
+  put(m,"Z15",7)
+  put(m,"T15",8)
+  
+  
+  mcp = lu.arrcopy(m)
+  
+  p.printcln("----- Base inicial -----")
+  
+  i = 0
+  while(i<9) beg
+    p.println(m[i])
+    i = i + 1
+  endwhile
+  
+  p.printcln("----- Base inicial saiu -----")
+  
+  q.quicksort(m,0,8)
+  
+  p.printcln("----- Base ordenada item -----")
+  p.printc("Valor de m[3]:")
+  p.println(m[3])
+  p.printcln("----- Base ordenada total -----")
+  
+  i = 0
+  t = lu.len(m)
+  while(i<t) beg
+    p.println(m[i])
+    i = i + 1
+  endwhile
+  
+  p.printcln(" ")
+  p.printcln("---- Base inicial -----")
+  p.printcln(" ")
+  
+  i = 0
+  t = lu.len(mcp)
+  while(i<t) beg
+    p.println(mcp[i])
+    i = i + 1
+  endwhile
+  
+  p.printcln(" ")
+  p.println(m[4])
+  p.println(mcp[4])
+  
+enddef
+
+endclass

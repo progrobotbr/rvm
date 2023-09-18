@@ -1,0 +1,31 @@
+class teste12 beg
+
+  def main() beg
+
+    object(print) p
+    object(string) s1
+    object(string) s2
+    
+    p = new print
+    s1 = new string
+    s2 = new string
+    
+    s1.init("renato11")
+    s2.init("renato11")
+    
+    s1.appendca("rrreeeee")
+    s2.appendca("rrreeeee")
+    
+    p.printcln("inicio")
+    
+    if(s1.equals(s2) == 1) beg
+      p.printcln("é igual")
+    else
+      p.printcln("erro")
+    endif
+    
+    p.printcln("fim")
+    
+  enddef
+
+endclass

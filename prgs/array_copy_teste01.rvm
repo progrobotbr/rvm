@@ -1,0 +1,32 @@
+class array_copy_teste01 beg
+
+def main() beg
+
+  object(lang_util) lu
+  object(print) p
+  char ch[4]
+  char ch2[4]
+  int i
+    
+  p = new print
+  lu = new lang_util
+  
+  ch[0] = "X"
+  ch[1] = "X"
+  ch[2] = "X"
+  ch[3] = "Z"
+ 
+  p.printcln(ch)
+  
+  ch2 = lu.arrcopy(ch)
+  
+  ch[1] = "O"
+  
+  p.printcln(ch)
+  p.printcln(ch2)
+   
+  
+enddef
+
+
+endclass

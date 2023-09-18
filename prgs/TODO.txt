@@ -1,0 +1,4 @@
+-- erro no TreeChar ao carregar classes com nomes como header e headerfct
+-- na passagem de parametros quando é classe não informa o objeto no erro
+-- recursão está dando erro quando chama muitas funções, parece dar erro de memória
+-- criar passagem de parametros do tipo tabela

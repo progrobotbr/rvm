@@ -1,0 +1,12 @@
+class prim
+beg
+
+  int res
+
+  def int calc(int p1, int p2) beg
+    int aa
+    aa = p1*p2    
+    return(aa)
+  enddef
+ 
+endclass

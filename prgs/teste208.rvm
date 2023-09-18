@@ -1,0 +1,30 @@
+class teste208 beg
+
+def main() beg
+
+  char mbuf[2]
+  char cbuf[2]
+  float f
+  
+ 
+  
+  mbuf[0] = "R"
+  mbuf[1] = "R"
+  
+  f = 0
+  cbuf[f] = mbuf[f]
+  f = 1
+  cbuf[f] = mbuf[f]
+  object(print) p 
+  
+  p = new print  
+  
+  p.printc(mbuf)
+  
+  
+
+
+enddef
+
+
+endclass

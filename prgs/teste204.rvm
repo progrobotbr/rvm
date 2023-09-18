@@ -1,0 +1,42 @@
+class teste204 beg
+
+  --
+  -- testa isnull
+  -- 
+  def main() beg
+  
+    int i
+	int z
+    object(string) ss[10]
+	object(lang_util) lu
+	object(print) pp
+	object(string) s
+	object(string) s1
+	
+	lu = new lang_util
+	
+	pp = new print
+	s = new string
+	s.string("RRR")
+	ss[0] = s
+	i = lu.isnull(ss[0])
+	
+	pp.printiln(i)
+	
+	i = lu.isnull(ss[1]) 
+	pp.printiln(i)
+	
+	s1 = new string
+	i = lu.isnull(s1)
+    if(i == 0) beg
+      pp.printcln("Nao inicializado")
+    else
+      pp.printcln("Inicializado")
+    endif
+	
+	pp.printiln(i)
+  
+  enddef
+
+
+endclass

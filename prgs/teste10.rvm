@@ -1,0 +1,35 @@
+class teste10 beg
+  int dd
+  def int calc(int seq, int i, int t) beg
+    int z
+    dd = dd + 1
+    object(print) p
+    p = new print
+    if( dd < 10000 ) beg
+      z = calc(dd,i,t)
+      z = z + 5
+      p.printi(seq)
+      p.printc("-")
+      p.printiln(z)
+    else
+      z = i + t
+    endif
+    
+    return(z)
+  enddef
+  
+  def main() beg
+   
+    object(print) p
+    int i
+  
+    dd = 0
+    
+    i = calc(dd,10,10)
+    
+    p = new print
+    p.printiln(i)
+    
+  enddef
+
+endclass

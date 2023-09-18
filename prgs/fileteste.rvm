@@ -1,0 +1,23 @@
+class fileteste beg
+
+def main() beg
+
+  object(file) f
+  object(print) p
+  char mbuf[]
+  f = new file
+  p = new print
+  p.printcln("ok")
+  
+ f.openwrite("c:\renato\zz01.txt")
+ --  f.openread("c:\renato\zz01.txt")
+ --  f.readll()
+  f.write("Gravacao efetuado com sucesso!!!")
+
+  f.close()
+  
+  p.printcln(mbuf)
+
+enddef
+
+endclass

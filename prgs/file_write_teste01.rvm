@@ -1,0 +1,39 @@
+class file_write_teste01 beg
+
+def main() beg
+
+  object(teste16) oo
+  object(print) gp
+  
+  int i 
+  int z
+  
+  gp = new print
+  
+  oo = new teste16
+  oo.main()
+  oo.main()
+  oo.main()
+  oo.main()
+  
+  --oo.aaa = 51
+  
+  --oo.aaa = i
+  z = oo.aaa + 100
+  
+  gp.printiln(z)
+  
+  object(file) f
+  f = new file
+  f.openwrite("c:\renato\zz01.txt")
+  f.write("aaaa")
+  f.close()
+  
+  
+  --object(ubound) oo1
+  --oo1 = new ubound
+  
+  --i = oo1.isarray(oo)
+enddef
+
+endclass 

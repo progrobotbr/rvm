@@ -1,0 +1,121 @@
+class teste8 beg
+  
+  def put(object(header) h, char c[], int ii) beg
+    h.idade = ii
+    h.nome = c
+  enddef
+  
+  def show(object(print) p, object(header) h, int ii) beg
+      p.printi(ii)
+      p.printc("-")
+      p.printc("idade : ")
+      p.printi(h.idade)
+      p.printcln(h.nome)
+  enddef
+  
+  def main() beg
+   
+    object(header) hd
+    object(print) p
+    table(header) tb
+    int i
+    int rc
+    
+    p = new print
+    
+    p.printcln("inicio")
+    
+    hd = new header
+    put(hd,"dan",21)
+    tb.append(hd)
+    
+    hd = new header
+    put(hd,"dudu",32)
+    tb.append(hd)
+    
+    hd = new header
+    put(hd,"renato",44)
+    tb.append(hd)
+    
+    hd = new header
+    put(hd,"bocoyo",576)
+    tb.append(hd)
+    
+    hd = new header
+    put(hd,"fernanda",68)
+    tb.append(hd)
+    
+    hd = new header
+    put(hd,"nora",72)
+    tb.append(hd)
+    
+    hd = new header
+    put(hd,"lury",81)
+    tb.append(hd)
+    
+    hd = tb.get(3)
+    p.enter()
+    p.printcln("idade : ")
+    p.printiln(hd.idade)
+    
+    int ii
+    int zz
+    ii = tb.size()
+    p.printiln(ii)
+    zz=1
+    while(zz <= ii)beg
+      hd = tb.get(zz)
+      show(p,hd,zz)
+      zz = zz + 1
+    endwhile
+    
+    
+    hd = new header
+    hd.idade = 100
+    hd.nome = "pepa"
+    
+    tb.modify(hd,2)
+    
+    hd = tb.get(5)
+    show(p, hd, 0)
+    hd = tb.get(1)
+    show(p, hd, 1)
+    hd = tb.get(2)
+    show(p, hd, 2)
+    
+    int dd
+    
+    dd=1
+    zz=1
+    ii = tb.size()
+    
+    p.printcln("fase1")
+    
+    while(zz<820000) beg
+      hd = new header
+      put(hd,"bocoyo",zz)
+      p.printiln(zz)
+      rc = tb.append(hd)
+      zz=zz+1
+    endwhile
+    
+    p.printcln("fase2")
+    
+    dd=1
+    zz=1
+    ii = tb.size()
+    while(zz<820000)beg
+      hd = tb.get(dd)
+      --p.printcln("a")
+      show(p,hd,zz)
+      zz = zz + 1
+      dd = dd + 1
+      if(dd > ii) beg
+        dd = 1
+      endif
+    endwhile
+    p.printcln("fim")
+    
+  enddef
+
+endclass

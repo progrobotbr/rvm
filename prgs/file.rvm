@@ -1,0 +1,53 @@
+class file beg
+
+  --
+  -- nativo
+  --
+  defnative int __fileopen(char arquivo[], char opcao[])
+  defnative int __filewrite(int fp, char sdata[])
+  defnative char[] __fileread512(int fp)
+  defnative int __fileclose(int fp)
+  
+  int lfile
+  
+  def int openwrite(char ps[]) beg
+    int l 
+	l = __fileopen(ps, "wb")
+	lfile = l
+	if(l > 0) beg
+	  return(1)
+	else
+	  return(0)
+	endif
+  enddef
+  
+  def int openread(char ps[]) beg
+    int l 
+	l = __fileopen(ps, "rb")
+	lfile = l
+	if(l > 0) beg
+	  return(1)
+	else
+	  return(0)
+	endif
+  enddef
+  
+  def int write(char ps[]) beg
+    int i
+    i = __filewrite(lfile, ps)
+	if(i > 0) beg
+	  return(1)
+	else
+	  return(0)
+	endif
+  enddef
+  
+  def char[] read512() beg
+    return(__fileread512(lfile))
+  enddef
+
+  def close() beg
+    __fileclose(lfile)
+  enddef
+  
+endclass

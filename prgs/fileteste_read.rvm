@@ -1,0 +1,107 @@
+class fileteste_read beg
+--
+-- le um arquivo grande, mas no máximo com 15000 caracteres
+--   porque o tipo int é de 2 bytes... mudar para long
+--
+def print(table(string) ptb) beg 
+ 
+  int i
+  int itab_size 
+  int icarac_total
+  int icount_carac_linha
+  int ilinha_size
+  
+  char mbuf[]
+  object(string) s
+  object(print) p
+  object(lang_util) lu
+  
+  p = new print
+  lu = new lang_util 
+  
+  mbuf = lu.arrcreate(mbuf, 14000)
+  itab_size = ptb.size()
+  
+  --tabela começa com indice 1 termina no indice tamanho
+  i=1  
+  icarac_total = 0
+  while(i<=itab_size) beg
+    s = ptb.get(i)
+	ilinha_size = s.size()
+	icount_carac_linha = 0
+	while(icount_carac_linha<ilinha_size) beg
+	 mbuf[icarac_total] = s.str[icount_carac_linha]
+	  icount_carac_linha = icount_carac_linha + 1
+	  icarac_total = icarac_total + 1
+	  if(icarac_total>=14000) beg 
+	    i = 14000
+		break
+	  endif
+	endwhile
+	i = i + 1
+  endwhile 
+  
+  p.printcln(mbuf)
+
+enddef
+
+def main() beg
+
+  int i
+  int t
+  int tt
+  int tarq
+  char mbuf[]
+  char marq[]
+  object(string) s
+  object(string) ss[]
+  object(file) f
+  object(print) p
+  object(lang_util) lu
+  table(string) tb
+  
+  s = new string
+  f = new file
+  p = new print
+  lu = new lang_util
+  
+  marq = "c:\renato\zz01.txt"
+  
+  lu.arrcreate(s.str, 10)
+  
+  --tb.append(s)
+  
+  p.printc("Leitura do arquivo-> ")
+  
+  p.printcln(marq)
+  
+  i = f.openread(marq)
+  
+  if(i==0) beg
+    p.printcln("Nao abriu")
+  else
+
+    t = 1
+	
+	tarq = 0
+	while(t<>0) beg	
+	  mbuf = f.read512()
+	  t = lu.len(mbuf)
+	  tarq = tarq + t
+	  if(t<>0) beg
+	    s = new string
+	    s.string(mbuf)
+	    tb.append(s)
+	  endif
+	  
+	endwhile
+	
+    f.close()
+  
+  endif
+  
+  print(tb)
+  
+enddef
+
+endclass

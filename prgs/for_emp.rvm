@@ -1,0 +1,16 @@
+class for_emp beg
+
+  def main() beg
+  
+    int i
+    i = 1
+    object(print) p
+    p = new print
+    while(i<1000000) beg
+      p.printc("Teste ")
+      p.printiln(i)
+      i = i+1
+    endwhile
+  enddef
+  
+endclass
